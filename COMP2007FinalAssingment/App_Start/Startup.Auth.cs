@@ -58,11 +58,11 @@ namespace COMP2007FinalAssingment
             //   appId: "",
             //   appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "427616102779-b18qkjn6j87ac86mud43biq7khvs2mp5.apps.googleusercontent.com",
+                ClientSecret = "kELBm9iSpecir7cp3k1lKyax"
+            });
         }
     }
 }
