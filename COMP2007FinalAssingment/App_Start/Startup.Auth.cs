@@ -54,9 +54,9 @@ namespace COMP2007FinalAssingment
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "1125283717559508",
+               appSecret: "b4d3a57ccee1b113308e333b0c1d9c1e");
 
             app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             {
