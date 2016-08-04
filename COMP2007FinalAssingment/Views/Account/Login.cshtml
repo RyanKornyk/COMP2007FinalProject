@@ -21,9 +21,9 @@
                 @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
             </div>
             <button>login</button>
-            <p class="message">Not registered? @Html.ActionLink("Create an Account", "Register")</p>
-            @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
+            <p class="message">Not registered? @Html.ActionLink("Create an Account", "Register")</p> 
         }
+        @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
 </div>
 
 @section Scripts {
