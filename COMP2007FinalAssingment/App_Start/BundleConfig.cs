@@ -21,10 +21,20 @@ namespace COMP2007FinalAssingment
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
-                      "~/Scripts/respond.js"));
+                      "~/Scripts/jquery.cookie.js",
+                      "~/Scripts/respond.js",
+                      "~/Scripts/waypoints.min.js",
+                      "~/Scripts/bootstrap-hover-dropdown.js",
+                      "~/Scripts/owl.carousel.min.js",
+                      "~/Scripts/front.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
+                      "~/Content/font-awesome.css",
+                      "~/Content/animate.min.css",
+                      "~/Content/owl.carousel.css",
+                      "~/Content/owl.theme.min.css",
+                      "~/Content/style.green.css",
                       "~/Content/site.css"));
         }
     }
