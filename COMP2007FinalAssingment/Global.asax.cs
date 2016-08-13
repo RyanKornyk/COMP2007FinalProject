@@ -12,6 +12,7 @@ namespace COMP2007FinalAssingment
     {
         protected void Application_Start()
         {
+            System.Data.Entity.Database.SetInitializer(new COMP2007FinalAssingment.Models.SampleData());
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace COMP2007FinalAssingment.Models
 {
@@ -17,7 +19,8 @@ namespace COMP2007FinalAssingment.Models
 
         public virtual string Image { get; set; }
 
-        public virtual List<string> Benefits { get; set; }
+        [DataType(DataType.MultilineText)]
+        public virtual string Benefits { get; set; }
 
         public ICollection<Product> Products { get; set; }
     }

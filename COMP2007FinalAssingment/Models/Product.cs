@@ -20,6 +20,7 @@ namespace COMP2007FinalAssingment.Models
 
         public virtual double Price { get; set; }
 
+        [DataType(DataType.MultilineText)]
         public virtual string Description { get; set; }
 
         public virtual string Image { get; set; }
