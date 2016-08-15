@@ -34,7 +34,7 @@ namespace COMP2007FinalAssingment
                       "~/Content/animate.min.css",
                       "~/Content/owl.carousel.css",
                       "~/Content/owl.theme.min.css",
-                      "~/Content/style.green.css",
+                      "~/Content/style.blue.css",
                       "~/Content/site.css"));
         }
     }

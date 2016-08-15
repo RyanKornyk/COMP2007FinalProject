@@ -38,9 +38,9 @@
         <div class="container">
             <div class="navbar-header">
 
-                <a class="navbar-brand home" href="index.html" data-animate-hover="bounce">
-                    <img src="~/Assets/img/logo.png" alt="Obaju logo" class="hidden-xs">
-                    <img src="~/Assets/img/logo-small.png" alt="Obaju logo" class="visible-xs"><span class="sr-only">Obaju - go to homepage</span>
+                <a class="navbar-brand home" href="@Url.Action("Index","Home")" data-animate-hover="bounce">
+                    <img src="~/Assets/img/logo.png" alt="Atlas logo" class="hidden-xs">
+                    <img src="~/Assets/img/logo-small.png" alt="Atlas logo" class="visible-xs"><span class="sr-only">Atlas - go to homepage</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
@@ -57,7 +57,7 @@
                 </div>
             </div>
             <!--/.navbar-header -->
-
+            
             <div class="navbar-collapse collapse" id="navigation">
 
                 <ul class="nav navbar-nav navbar-left">
@@ -68,93 +68,46 @@
                        @Html.ActionLink("About", "About", "Home")
                     </li>
                     <li class="dropdown yamm-fw">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Men <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Store <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
                                 <div class="yamm-content">
                                     <div class="row">
                                         <div class="col-sm-3">
-                                            <h5>Clothing</h5>
+                                            <h5>Products</h5>
                                             <ul>
                                                 <li>
-                                                    <a href="category.html">T-shirts</a>
-                                                </li>
-                                                <li>
-                                                    <a href="category.html">Shirts</a>
-                                                </li>
-                                                <li>
-                                                    <a href="category.html">Pants</a>
-                                                </li>
-                                                <li>
-                                                    <a href="category.html">Accessories</a>
+                                                    @Html.ActionLink("Products", "Index", "Products")
                                                 </li>
                                             </ul>
                                         </div>
                                         <div class="col-sm-3">
-                                            <h5>Shoes</h5>
+                                            <h5>Brands</h5>
                                             <ul>
                                                 <li>
-                                                    <a href="category.html">Trainers</a>
+                                                    @Html.ActionLink("Brands", "Index", "Brands")
                                                 </li>
-                                                <li>
-                                                    <a href="category.html">Sandals</a>
-                                                </li>
-                                                <li>
-                                                    <a href="category.html">Hiking shoes</a>
-                                                </li>
-                                                <li>
-                                                    <a href="category.html">Casual</a>
-                                                </li>
+                                         
                                             </ul>
                                         </div>
                                         <div class="col-sm-3">
-                                            <h5>Accessories</h5>
+                                            <h5>Goals</h5>
                                             <ul>
                                                 <li>
-                                                    <a href="category.html">Trainers</a>
+                                                    @Html.ActionLink("Goals", "Index", "Goals")
                                                 </li>
-                                                <li>
-                                                    <a href="category.html">Sandals</a>
-                                                </li>
-                                                <li>
-                                                    <a href="category.html">Hiking shoes</a>
-                                                </li>
-                                                <li>
-                                                    <a href="category.html">Casual</a>
-                                                </li>
-                                                <li>
-                                                    <a href="category.html">Hiking shoes</a>
-                                                </li>
-                                                <li>
-                                                    <a href="category.html">Casual</a>
-                                                </li>
+
                                             </ul>
                                         </div>
                                         <div class="col-sm-3">
-                                            <h5>Featured</h5>
+                                            <h5>Ingredients</h5>
                                             <ul>
                                                 <li>
-                                                    <a href="category.html">Trainers</a>
+                                                    @Html.ActionLink("Ingredients", "Index", "Ingredients")
                                                 </li>
-                                                <li>
-                                                    <a href="category.html">Sandals</a>
-                                                </li>
-                                                <li>
-                                                    <a href="category.html">Hiking shoes</a>
-                                                </li>
+
                                             </ul>
-                                            <h5>Looks and trends</h5>
-                                            <ul>
-                                                <li>
-                                                    <a href="category.html">Trainers</a>
-                                                </li>
-                                                <li>
-                                                    <a href="category.html">Sandals</a>
-                                                </li>
-                                                <li>
-                                                    <a href="category.html">Hiking shoes</a>
-                                                </li>
-                                            </ul>
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -162,18 +115,10 @@
                             </li>
                         </ul>
                     </li>
-                    <li>
-                        @Html.ActionLink("Products", "Index", "Products")
-                    </li>
-                    <li>
-                        @Html.ActionLink("Brands", "Index", "Brands")
-                    </li>
-                    <li>
-                        @Html.ActionLink("Goals", "Index", "Goals")
-                    </li>
-                    <li>
-                        @Html.ActionLink("Ingredients", "Index", "Ingredients")
-                    </li>
+                    
+                    
+                   
+                  
                     <li>
                         @Html.ActionLink("Contact", "Contact", "Home")
                     </li>

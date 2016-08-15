@@ -239,9 +239,9 @@
     <Content Include="Assets\img\getinspired1.jpg" />
     <Content Include="Assets\img\getinspired2.jpg" />
     <Content Include="Assets\img\getinspired3.jpg" />
+    <Content Include="Assets\img\logo.png" />
     <Content Include="Content\grabbing.png" />
     <Content Include="Assets\img\logo-small.png" />
-    <Content Include="Assets\img\logo.png" />
     <Content Include="Assets\img\main-slider1.jpg" />
     <Content Include="Assets\img\main-slider2.jpg" />
     <Content Include="Assets\img\main-slider3.jpg" />
@@ -265,6 +265,7 @@
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\owl.carousel.css" />
     <Content Include="Content\owl.theme.css" />
+    <Content Include="Content\style.blue.css" />
     <Content Include="Content\style.green.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />

@@ -154,3 +154,7 @@ button#Facebook:active,
 button#Facebook:focus {
     background-color: rgb(59, 89, 152);
 }
+
+.navbar-brand img{
+    height: 60px;
+}
