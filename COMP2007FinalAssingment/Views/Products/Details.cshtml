@@ -73,6 +73,9 @@
         <dd>
             @Html.DisplayFor(model => model.Rating)
         </dd>
+        <p class="button">
+            @Html.ActionLink("Add to cart", "AddToCart", "ShoppingCart", new { id = Model.ProductID }, "")
+        </p>
 
     </dl>
 </div>

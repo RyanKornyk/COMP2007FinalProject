@@ -20,5 +20,12 @@ namespace COMP2007FinalAssingment.Models
        public virtual DbSet<Ingredient> Ingredients { get; set; }
 
        public virtual DbSet<Brand> Brands { get; set; }
+
+        public DbSet<CartItem> CartItems
+        { get; set; }
+        public DbSet<Order> Orders
+        { get; set; }
+        public DbSet<OrderDetail> OrderDetails
+        { get; set; }
     }
 }

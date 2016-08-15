@@ -18,7 +18,7 @@ namespace COMP2007FinalAssingment.Models
 
         public virtual string Title { get; set; }
 
-        public virtual double Price { get; set; }
+        public virtual decimal Price { get; set; }
 
         [DataType(DataType.MultilineText)]
         public virtual string Description { get; set; }

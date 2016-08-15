@@ -422,6 +422,7 @@ namespace COMP2007FinalAssingment.Controllers
 
             base.Dispose(disposing);
         }
+       
 
         #region Helpers
         // Used for XSRF protection when adding external logins
