@@ -19,6 +19,7 @@ namespace COMP2007FinalAssingment.Controllers
         public async Task<ActionResult> Index()
         {
             var products = db.Products.Include(p => p.Brand).Include(p => p.Goal).Include(p => p.Ingredient);
+            
             return View(await products.ToListAsync());
         }
 
@@ -34,6 +35,9 @@ namespace COMP2007FinalAssingment.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.Brands = db.Brands;
+            ViewBag.Goals = db.Goals;
+            ViewBag.Ingredients = db.Ingredients;
             return View(product);
         }
 

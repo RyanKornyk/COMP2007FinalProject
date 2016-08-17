@@ -2,84 +2,167 @@
 
 @{
     ViewBag.Title = "Details";
+    string tempImg;
 }
 
-<h2>Details</h2>
 
-<div>
-    <h4>Product</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Brand.Title)
-        </dt>
+<div id="content">
+    <div class="container">
 
-        <dd>
-            @Html.DisplayFor(model => model.Brand.Title)
-        </dd>
+        <div class="col-md-12">
+            <ul class="breadcrumb">
+                <li>
+                    <a href="@Url.Action("Index","Home")">Home</a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Index")">Store</a>
+                </li>
+                <li>@Model.Title</li>
+            </ul>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Goal.Title)
-        </dt>
+        </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.Goal.Title)
-        </dd>
+        <div class="col-md-3">
+            <!-- *** MENUS AND FILTERS ***
+        _________________________________________________________ -->
+            <div class="panel panel-default sidebar-menu">
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Ingredient.Title)
-        </dt>
+                <div class="panel-heading">
+                    <h3 class="panel-title">Categories</h3>
+                </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.Ingredient.Title)
-        </dd>
+                <div class="panel-body">
+                    <ul class="nav nav-pills nav-stacked category-menu">
+                        <li>
+                            <a href="#">Brands <span class="badge pull-right"></span></a>
+                            <ul>
+                                @foreach (var item in ViewBag.Brands)
+                                {
+                                    <li>
+                                        <a href="">@item.Title</a>
+                                    </li>
+                                }
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Goals  <span class="badge pull-right"></span></a>
+                            <ul>
+                                @foreach (var item in ViewBag.Goals)
+                                {
+                                    <li>
+                                        <a href="#">@item.Title</a>
+                                    </li>
+                                }
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Main Ingredient  <span class="badge pull-right"></span></a>
+                            <ul>
+                                @foreach (var item in ViewBag.Ingredients)
+                                {
+                                    <li>
+                                        <a href="#">@item.Title</a>
+                                    </li>
+                                }
+                            </ul>
+                        </li>
 
-        <dd>
-            @Html.DisplayFor(model => model.Title)
-        </dd>
+                    </ul>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Price)
-        </dt>
+                </div>
+            </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.Price)
-        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
+            <!-- *** MENUS AND FILTERS END *** -->
 
-        <dd>
-            @Html.DisplayFor(model => model.Description)
-        </dd>
+            <div class="banner">
+                <a href="#">
+                    <img src="~/Assets/img/banner.jpg" alt="sales 2014" class="img-responsive">
+                </a>
+            </div>
+        </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Image)
-        </dt>
+            
+        @if(Model.Image == null)
+        {
+            tempImg = "Assets/img/placeholder-450-600.jpg";
+        }
+        else
+        {
+            tempImg = Model.Image;
+        }
+        <div class="col-md-9">
 
-        <dd>
-            @Html.DisplayFor(model => model.Image)
-        </dd>
+            <div class="row" id="productMain">
+                <div class="col-sm-6">
+                    <div id="mainImage">
+                        <img src="~/@tempImg" alt="" class="img-responsive">
+                    </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Rating)
-        </dt>
+                    <div class="ribbon new">
+                        <div class="theribbon">NEW</div>
+                        <div class="ribbon-background"></div>
+                    </div>
+                    <!-- /.ribbon -->
 
-        <dd>
-            @Html.DisplayFor(model => model.Rating)
-        </dd>
-        <p class="button">
-            @Html.ActionLink("Add to cart", "AddToCart", "ShoppingCart", new { id = Model.ProductID }, "")
-        </p>
+                </div>
+                <div class="col-sm-6">
+                    <div class="box">
+                        <h1 class="text-center">@Model.Title</h1>
+                        <div class="text-center">
+                            @for (var i = 0; i < Model.Rating; i++)
+                            {
+                                <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+                            }
+                        </div>
+                        <p class="goToDescription">
+                            <a href="#details" class="scroll-to">Scroll to product details</a>
+                        </p>
+                        <p class="price">$@Model.Price</p>
+                        
+                        <p class="text-center buttons">
+                            <a href="@Url.Action("AddToCart","ShoppingCart", new { id = Model.ProductID })" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                        </p>
 
-    </dl>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="box" id="details">
+                <h4>Brand</h4>
+                <p>@Model.Brand.Title</p>
+
+                <h4>Main Ingredient</h4>
+                <p>@Model.Ingredient.Title</p>
+
+                <h4>Goal</h4>
+                <p>@Model.Goal.Title</p>
+
+                    <h4>Product details</h4>
+                <p>@Model.Description</p>
+               
+
+                <hr>
+                <div class="social">
+                    <h4>Show it to your friends</h4>
+                    <p>
+                        <a href="#" class="external facebook" data-animate-hover="pulse"><i class="fa fa-facebook"></i></a>
+                        <a href="#" class="external gplus" data-animate-hover="pulse"><i class="fa fa-google-plus"></i></a>
+                        <a href="#" class="external twitter" data-animate-hover="pulse"><i class="fa fa-twitter"></i></a>
+                        <a href="#" class="email" data-animate-hover="pulse"><i class="fa fa-envelope"></i></a>
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- /.col-md-9 -->
+    </div>
+    <!-- /.container -->
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ProductID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+<!-- /#content -->
