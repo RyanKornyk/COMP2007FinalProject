@@ -249,7 +249,9 @@
     <Content Include="Assets\img\getinspired2.jpg" />
     <Content Include="Assets\img\getinspired3.jpg" />
     <Content Include="Assets\img\logo.png" />
+    <Content Include="Assets\img\placeholder-400-400.jpg" />
     <Content Include="Assets\img\placeholder-450-600.jpg" />
+    <Content Include="Assets\img\placeholder-750-450.jpg" />
     <Content Include="Content\grabbing.png" />
     <Content Include="Assets\img\logo-small.png" />
     <Content Include="Assets\img\main-slider1.jpg" />
