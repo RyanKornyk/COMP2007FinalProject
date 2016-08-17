@@ -61,10 +61,10 @@
             <div class="navbar-collapse collapse" id="navigation">
 
                 <ul class="nav navbar-nav navbar-left">
-                    <li class="active">
+                    <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Index" ? "active" : "")">
                         @Html.ActionLink("Home", "Index", "Home")
                     </li>
-                    <li>
+                    <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "About" ? "active" : "")">
                        @Html.ActionLink("About", "About", "Home")
                     </li>
                     <li class="dropdown yamm-fw">
@@ -125,7 +125,7 @@
                     
                    
                   
-                    <li>
+                    <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Contact" ? "active" : "")">
                         @Html.ActionLink("Contact", "Contact", "Home")
                     </li>
                 </ul>
