@@ -154,7 +154,7 @@
 
             <div class="banner">
                 <a href="#">
-                    <img src="img/banner.jpg" alt="sales 2014" class="img-responsive">
+                    <img src="../Assets/img/banner.jpg" alt="sales 2014" class="img-responsive">
                 </a>
             </div>
         </div>
@@ -164,7 +164,7 @@
                 <h1>Store</h1>
                 <p>In our store we offer wide selection of the best products we have found and carefully selected worldwide.</p>
             </div>
-
+            <!--
             <div class="box info-bar">
                 <div class="row">
                     <div class="col-sm-12 col-md-4 products-showing">
@@ -194,7 +194,7 @@
                     </div>
                 </div>
             </div>
-
+            -->
             <div class="row products">
                 @foreach (var item in ViewBag.Products) {
                     if(@item.Image == null)
@@ -229,7 +229,9 @@
                             <p class="price">$ @item.Price</p>
                             <p class="buttons">
                                 <a href="@Url.Action("Details","Products", new { id = @item.ProductID })" class="btn btn-default">View detail</a>
-                                <a href="#" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                <a href="@Url.Action("AddToCart","ShoppingCart",new { id = item.ProductID })" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                
+                                
                             </p>
                         </div>
                         <!-- /.text -->
@@ -293,7 +295,7 @@
             </div>
             <!-- /.products -->
 
-            <div class="pages">
+          <!-- <div class="pages">
 
                 <p class="loadMore">
                     <a href="#" class="btn btn-primary btn-lg"><i class="fa fa-chevron-down"></i> Load more</a>
@@ -322,7 +324,7 @@
                         <a href="#">&raquo;</a>
                     </li>
                 </ul>
-            </div>
+            </div>--> 
 
 
         </div>

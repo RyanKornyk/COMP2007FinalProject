@@ -74,6 +74,12 @@
                                 <div class="yamm-content">
                                     <div class="row">
                                         <div class="col-sm-3">
+                                            <h5>Main Store</h5>
+                                            <ul>
+                                                <li>
+                                                    @Html.ActionLink("Main Store", "Index", "Store")
+                                                </li>
+                                            </ul>
                                             <h5>Products</h5>
                                             <ul>
                                                 <li>
@@ -130,7 +136,7 @@
             <div class="navbar-buttons">
 
                 <div class="navbar-collapse collapse right" id="basket-overview">
-                    <a id="cart-status" href="@Url.Action("Index", "ShoppingCart")" class="btn btn-primary navbar-btn"><i class="fa fa-shopping-cart"></i><span class="hidden-sm">@{Html.RenderAction("CartSummary", "ShoppingCart");} items in cart</span></a>
+                    <a id="cart-status" href="@Url.Action("Index", "ShoppingCart")" class="btn btn-primary navbar-btn"><i class="fa fa-shopping-cart"></i><span class="hidden-sm">@{Html.RenderAction("CartSummary", "ShoppingCart");} item(s) in cart</span></a>
                 </div>
                
                 <!--/.nav-collapse -->
