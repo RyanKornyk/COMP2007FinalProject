@@ -69,13 +69,13 @@ h1 {
   color: #999999;
 }
 #top #login-modal .modal-header {
-  background: #2791B2;
+  background: #51D5FF;
 }
 #top #login-modal .modal-header h4 {
   color: #fff;
 }
 #top #login-modal a {
-  color: #2791B2;
+  color: #51D5FF;
 }
 #top #login-modal p {
   font-weight: 300;
@@ -109,7 +109,7 @@ h1 {
   display: block;
 }
 .navbar .yamm-content ul li a:hover {
-  color: #2791B2;
+  color: #51D5FF;
   text-decoration: none;
 }
 .navbar .yamm-content .banner {
@@ -150,7 +150,7 @@ h1 {
 #hot h2 {
   text-transform: uppercase;
   font-size: 36px;
-  color: #2791B2;
+  color: #51D5FF;
   font-weight: 100;
   text-align: center;
 }
@@ -178,7 +178,7 @@ h1 {
 }
 #hot .product-slider .owl-controls .owl-page.active span,
 #hot .product-slider .owl-controls.clickable .owl-page:hover span {
-  background: #2791B2;
+  background: #51D5FF;
 }
 #advantages {
   text-align: center;
@@ -242,7 +242,7 @@ h1 {
 #main-slider .owl-controls .owl-page.active span,
 .box.slideshow .owl-controls.clickable .owl-page:hover span,
 #main-slider .owl-controls.clickable .owl-page:hover span {
-  background: #2791B2;
+  background: #51D5FF;
 }
 .breadcrumb {
   -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
@@ -317,7 +317,7 @@ h1 {
   padding: 6px 20px 6px 20px;
   margin: 30px 10px 10px -71px;
   color: #fff;
-  background-color: #2791B2;
+  background-color: #51D5FF;
   text-shadow: 0px 1px 2px #bbb;
 }
 .ribbon .theribbon:before,
@@ -676,11 +676,11 @@ h1 {
   border: solid 2px transparent;
 }
 #content #thumbs a.active {
-  border-color: #2791B2;
+  border-color: #51D5FF;
 }
 #content #checkout .nav {
   margin-bottom: 20px;
-  border-bottom: solid 1px #2791B2;
+  border-bottom: solid 1px #51D5FF;
 }
 #content #checkout .nav li {
   height: 100%;
@@ -762,7 +762,7 @@ h1 {
 #content #blog-homepage .post h2 a:hover,
 #content #blog-listing .post h4 a:hover,
 #content #blog-homepage .post h4 a:hover {
-  color: #2791B2;
+  color: #51D5FF;
 }
 #content #blog-listing .post .author-category,
 #content #blog-homepage .post .author-category {
@@ -776,7 +776,7 @@ h1 {
 }
 #content #blog-listing .post .date-comments a:hover,
 #content #blog-homepage .post .date-comments a:hover {
-  color: #2791B2;
+  color: #51D5FF;
 }
 #content #blog-listing .post .intro,
 #content #blog-homepage .post .intro {
@@ -1026,7 +1026,7 @@ h1 {
 .nav .open > a:hover,
 .nav .open > a:focus {
   background-color: #eeeeee;
-  border-color: #2791B2;
+  border-color: #51D5FF;
 }
 .nav-tabs {
   border-bottom: 1px solid #dddddd;
@@ -1052,7 +1052,7 @@ h1 {
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
   color: #ffffff;
-  background-color: #2791B2;
+  background-color: #51D5FF;
 }
 .nav-tabs-justified > li > a {
   border-radius: 4px;
@@ -1269,7 +1269,7 @@ h1 {
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
   color: #555555;
-  background-color: #2791B2;
+  background-color: #51D5FF;
 }
 .navbar-default .navbar-nav > .disabled > a,
 .navbar-default .navbar-nav > .disabled > a:hover,
@@ -1293,7 +1293,7 @@ h1 {
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
-  background-color: #2791B2;
+  background-color: #51D5FF;
   color: #555555;
 }
 @media (max-width: 767px) {
@@ -1309,7 +1309,7 @@ h1 {
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
     color: #555555;
-    background-color: #2791B2;
+    background-color: #51D5FF;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a,
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover,
@@ -1333,7 +1333,7 @@ body {
   background-color: #f0f0f0;
 }
 a {
-  color: #2791B2;
+  color: #51D5FF;
   text-decoration: none;
 }
 a:hover,
@@ -1386,8 +1386,8 @@ hr {
 }
 .btn-primary {
   color: #ffffff;
-  background-color: #2791B2;
-  border-color: #3386e1;
+  background-color: #51D5FF;
+  border-color: #51D5FF;
 }
 .btn-primary:hover,
 .btn-primary:focus,
@@ -1395,8 +1395,8 @@ hr {
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
   color: #ffffff;
-  background-color: #257edf;
-  border-color: #1c68bb;
+  background-color: #2791B2;
+  border-color: #51D5FF;
 }
 .btn-primary:active,
 .btn-primary.active,
@@ -1418,11 +1418,11 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-  background-color: #2791B2;
-  border-color: #3386e1;
+  background-color: #51D5FF;
+  border-color: #51D5FF;
 }
 .btn-primary .badge {
-  color: #2791B2;
+  color: #51D5FF;
   background-color: #ffffff;
 }
 .btn-lg {
@@ -1500,7 +1500,7 @@ label {
   padding: 6px 12px;
   line-height: 1.42857143;
   text-decoration: none;
-  color: #2791B2;
+  color: #51D5FF;
   background-color: #ffffff;
   border: 1px solid #dddddd;
 }
@@ -1520,8 +1520,8 @@ label {
 .pagination > .active > span:focus {
   z-index: 2;
   color: #ffffff;
-  background-color: #2791B2;
-  border-color: #2791B2;
+  background-color: #51D5FF;
+  border-color: #51D5FF;
 }
 .pagination > .disabled > span,
 .pagination > .disabled > span:hover,
@@ -1605,14 +1605,14 @@ ol {
   font-style: italic;
 }
 .text-primary {
-  color: #2791B2;
+  color: #51D5FF;
 }
 a.text-primary:hover {
   color: #2079da;
 }
 .bg-primary {
   color: #fff;
-  background-color: #2791B2;
+  background-color: #51D5FF;
 }
 a.bg-primary:hover {
   background-color: #2079da;
@@ -1625,7 +1625,7 @@ blockquote {
   padding: 10px 20px;
   margin: 0 0 20px;
   font-size: 14px;
-  border-left: 5px solid #2791B2;
+  border-left: 5px solid #51D5FF;
 }
 blockquote footer,
 blockquote small,
@@ -1642,25 +1642,25 @@ blockquote .small:before {
 }
 .blockquote-reverse,
 blockquote.pull-right {
-  border-right: 5px solid #2791B2;
+  border-right: 5px solid #51D5FF;
 }
 address {
   margin-bottom: 20px;
   line-height: 1.42857143;
 }
 .panel-primary {
-  border-color: #2791B2;
+  border-color: #51D5FF;
 }
 .panel-primary > .panel-heading {
   color: #ffffff;
-  background-color: #2791B2;
-  border-color: #2791B2;
+  background-color: #51D5FF;
+  border-color: #51D5FF;
 }
 .panel-primary > .panel-heading + .panel-collapse .panel-body {
-  border-top-color: #2791B2;
+  border-top-color: #51D5FF;
 }
 .panel-primary > .panel-footer + .panel-collapse .panel-body {
-  border-bottom-color: #2791B2;
+  border-bottom-color: #51D5FF;
 }
 .panel-primary .panel-title {
   font-weight: 300;
