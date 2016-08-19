@@ -241,20 +241,8 @@
   <ItemGroup>
     <Content Include="Assets\img\AjaxLoader.gif" />
     <Content Include="Assets\img\banner.jpg" />
-    <Content Include="Assets\img\banner2.jpg" />
-    <Content Include="Assets\img\basketsquare.jpg" />
-    <Content Include="Assets\img\blog-avatar.jpg" />
-    <Content Include="Assets\img\blog-avatar2.jpg" />
-    <Content Include="Assets\img\blog.jpg" />
-    <Content Include="Assets\img\blog2.jpg" />
     <Content Include="Assets\img\chris.png" />
     <Content Include="Assets\img\christian.png" />
-    <Content Include="Assets\img\detailbig1.jpg" />
-    <Content Include="Assets\img\detailbig2.jpg" />
-    <Content Include="Assets\img\detailbig3.jpg" />
-    <Content Include="Assets\img\detailsquare.jpg" />
-    <Content Include="Assets\img\detailsquare2.jpg" />
-    <Content Include="Assets\img\detailsquare3.jpg" />
     <Content Include="Assets\img\getinspired1.jpg" />
     <Content Include="Assets\img\getinspired2.jpg" />
     <Content Include="Assets\img\getinspired3.jpg" />
@@ -264,7 +252,6 @@
     <Content Include="Assets\img\placeholder-450-600.jpg" />
     <Content Include="Assets\img\placeholder-750-450.jpg" />
     <Content Include="Content\grabbing.png" />
-    <Content Include="Assets\img\logo-small.png" />
     <Content Include="Assets\img\main-slider1.jpg" />
     <Content Include="Assets\img\main-slider2.jpg" />
     <Content Include="Assets\img\main-slider3.jpg" />
