@@ -1,4 +1,5 @@
-﻿@model IEnumerable<COMP2007FinalAssingment.Models.Product>
+﻿@model PagedList.IPagedList<COMP2007FinalAssingment.Models.Product>
+@using PagedList.Mvc;
 @{
     ViewBag.Title = "Store";
     string tempImg;
@@ -30,7 +31,7 @@
                 <div class="panel-body">
                     <ul class="nav nav-pills nav-stacked category-menu">
                         <li>
-                            <a href="@Url.Action("index", new { filter = "" })">View All <span class="badge pull-right"></span></a>
+                            <a href="@Url.Action("index", new { filter = ""})">View All <span class="badge pull-right"></span></a>
                             
                         </li>
                         <hr />
@@ -39,7 +40,7 @@
                             <ul>
                                 @foreach (var item in ViewBag.Brands) { 
                                 <li>
-                                    <a href="@Url.Action("index", new { filter = @item.Title })">@item.Title</a>
+                                    <a href="@Url.Action("index", new { filter = @item.Title, currentFilter = ViewBag.CurrentFilter })">@item.Title</a>
                                 </li>
                                 }
                                
@@ -51,7 +52,7 @@
                                 @foreach (var item in ViewBag.Goals)
                                 {
                                 <li>
-                                    <a href="@Url.Action("index", new { filter = @item.Title })">@item.Title</a>
+                                    <a href="@Url.Action("index", new { filter = @item.Title , currentFilter=ViewBag.CurrentFilter})">@item.Title</a>
                                 </li>
                                 }
                             </ul>
@@ -61,7 +62,7 @@
                             <ul>
                                 @foreach(var item in ViewBag.Ingredients) { 
                                 <li>
-                                    <a href="@Url.Action("index", new { filter = @item.Title })">@item.Title</a>
+                                    <a href="@Url.Action("index", new { filter = @item.Title, currentFilter=ViewBag.CurrentFilter })">@item.Title</a>
                                 </li>
                                 }
                             </ul>
@@ -91,7 +92,7 @@
             <div class="box info-bar">
                 <div class="row">
                     <div class="col-sm-12 col-md-4 products-showing">
-                        Showing <strong>@ViewData["itemCount"]</strong> of <strong>@ViewData["itemCount"]</strong> products
+                        Showing <strong>@Model.Count()</strong> of <strong>@ViewData["itemCount"]</strong> products
                     </div>
 
                     <div class="col-sm-12 col-md-8  products-number-sort">
@@ -99,14 +100,14 @@
                             <form class="form-inline">
                                 <div class="col-md-6 col-sm-6">
                                     <div class="products-number">
-                                        <strong>Show</strong>  <a href="#" class="btn btn-default btn-sm btn-primary">12</a>  <a href="#" class="btn btn-default btn-sm">24</a>  <a href="#" class="btn btn-default btn-sm">All</a> products
+                                        <strong>Show</strong>  <a href="@Url.Action("Index", new { pageSize = 6, currentFilter = ViewBag.CurrentFilter })" class="btn btn-default btn-sm btn-primary">6</a>  <a href="@Url.Action("Index", new { pageSize = 12, currentFilter = ViewBag.CurrentFilter })" class="btn btn-default btn-sm">12</a>  <a href="@Url.Action("Index", new { pageSize = 24, currentFilter = ViewBag.CurrentFilter })" class="btn btn-default btn-sm">24</a> <a href="@Url.Action("Index", new { pageSize = 999, currentFilter = ViewBag.CurrentFilter })" class="btn btn-default btn-sm">all</a>
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-sm-6">
                                     <div class="products-sort-by">
                                         <strong>Sort by</strong>
-                                        @Html.ActionLink("Title", "Index", new { sortOrder = ViewBag.NameSortParm })
-                                        @Html.ActionLink("Price", "Index", new { sortOrder = ViewBag.PriceSortParm })
+                                        @Html.ActionLink("Title", "Index", new { sortOrder = ViewBag.NameSortParm, currentFilter = ViewBag.CurrentFilter })
+                                        @Html.ActionLink("Price", "Index", new { sortOrder = ViewBag.PriceSortParm, currentFilter = ViewBag.CurrentFilter })
 
                                     </div>
                                 </div>
@@ -220,8 +221,12 @@
 
                 <p class="loadMore">
                     <a href="#" class="btn btn-primary btn-lg"><i class="fa fa-chevron-down"></i> Load more</a>
-                </p>
+                </p>-->
+              Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
 
+@Html.PagedListPager(Model, page => Url.Action("Index", 
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+        <!--
                 <ul class="pagination">
                     <li>
                         <a href="#">&laquo;</a>
