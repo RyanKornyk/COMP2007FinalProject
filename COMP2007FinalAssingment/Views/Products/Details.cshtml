@@ -115,6 +115,10 @@
                             {
                                 <i class="fa fa-star fa-lg" aria-hidden="true"></i>
                             }
+                            @if (Model.Rating == 0)
+                            {
+                                <p>No rating for this product</p>
+                            }
                         </div>
                         <p class="goToDescription">
                             <a href="#details" class="scroll-to">Scroll to product details</a>

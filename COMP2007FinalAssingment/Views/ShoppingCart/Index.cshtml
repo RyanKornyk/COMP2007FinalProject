@@ -2,45 +2,45 @@
 
 @{
     ViewBag.Title = "Shopping Cart";
-    string tempImg;
+    int count =0;
 }
 
-    <div id="content">
-        <div class="container">
+<div id="content">
+    <div class="container">
 
-            <div class="col-md-12">
-                <ul class="breadcrumb">
-                    <li>
-                        <a href="@Url.Action("Index","Store")">Store</a>
-                    </li>
-                    <li>Shopping cart</li>
-                </ul>
-            </div>
+        <div class="col-md-12">
+            <ul class="breadcrumb">
+                <li>
+                    <a href="@Url.Action("Index","Store")">Store</a>
+                </li>
+                <li>Shopping cart</li>
+            </ul>
+        </div>
 
-            <div class="col-md-9" id="basket">
+        <div class="col-md-9" id="basket">
 
-                <div class="box">
+            <div class="box">
 
-                    <form >
+                <form>
 
-                        <h1>Shopping cart</h1>
-                        <div id="update-message">
-                        </div>
-                        <div class="table-responsive">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th colspan="2">Product</th>
-                                        <th>Quantity</th>
-                                        <th>Unit price</th>
-                                        <th>Discount</th>
-                                        <th colspan="2">Total</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-@foreach (var item in
-                    Model.CartItems)
-{
+                    <h1>Shopping cart</h1>
+                    <div id="update-message">
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Product</th>
+                                    <th>Quantity</th>
+                                    <th>Unit price</th>
+                                    <th>Discount</th>
+                                    <th colspan="2">Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in
+Model.CartItems)
+                                {
                                     <tr id="row-@item.RecordId">
                                         <td>
                                             <a href="#">
@@ -50,7 +50,7 @@
                                                 }
                                                 else
                                                 {
-                                                <img src="@item.Product.Image" alt="@item.Product.Title">
+                                                    <img src="@item.Product.Image" alt="@item.Product.Title">
                                                 }
                                             </a>
                                         </td>
@@ -64,167 +64,119 @@
                                         <td>$0.00</td>
                                         <td>$@(item.Product.Price * @item.Count)</td>
                                         <td>
-                                            <a href="#"  data-id="@item.RecordId" class="RemoveLink"><i class="fa fa-trash-o"></i></a>
+                                            <a href="#" data-id="@item.RecordId" class="RemoveLink"><i class="fa fa-trash-o"></i></a>
                                         </td>
                                     </tr>
-}
-                                </tbody>
-                                
-                            </table>
-
-                        </div>
-                        <!-- /.table-responsive -->
-
-                        <div class="box-footer">
-                            <div class="pull-left">
-                                <a href="@Url.Action("Index","Store")" class="btn btn-default"><i class="fa fa-chevron-left"></i> Continue shopping</a>
-                            </div>
-                            <div class="pull-right">
-                              <!--  <button class="btn btn-default"><i class="fa fa-refresh"></i> Update basket</button>-->
-                                <a href="@Url.Action("AddressAndPayment","Checkout")" class="btn btn-primary">
-                                    Proceed to checkout <i class="fa fa-chevron-right"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                    </form>
-
-                </div>
-                <!-- /.box -->
-
-
-                <div class="row same-height-row">
-                    <div class="col-md-3 col-sm-6">
-                        <div class="box same-height">
-                            <h3>You may also like these products</h3>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6">
-                        <div class="product same-height">
-                            <div class="flip-container">
-                                <div class="flipper">
-                                    <div class="front">
-                                        <a href="detail.html">
-                                            <img src="img/product2.jpg" alt="" class="img-responsive">
-                                        </a>
-                                    </div>
-                                    <div class="back">
-                                        <a href="detail.html">
-                                            <img src="img/product2_2.jpg" alt="" class="img-responsive">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="detail.html" class="invisible">
-                                <img src="img/product2.jpg" alt="" class="img-responsive">
-                            </a>
-                            <div class="text">
-                                <h3>Fur coat</h3>
-                                <p class="price">$143</p>
-                            </div>
-                        </div>
-                        <!-- /.product -->
-                    </div>
-
-                    <div class="col-md-3 col-sm-6">
-                        <div class="product same-height">
-                            <div class="flip-container">
-                                <div class="flipper">
-                                    <div class="front">
-                                        <a href="detail.html">
-                                            <img src="img/product1.jpg" alt="" class="img-responsive">
-                                        </a>
-                                    </div>
-                                    <div class="back">
-                                        <a href="detail.html">
-                                            <img src="img/product1_2.jpg" alt="" class="img-responsive">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="detail.html" class="invisible">
-                                <img src="img/product1.jpg" alt="" class="img-responsive">
-                            </a>
-                            <div class="text">
-                                <h3>Fur coat</h3>
-                                <p class="price">$143</p>
-                            </div>
-                        </div>
-                        <!-- /.product -->
-                    </div>
-
-
-                    <div class="col-md-3 col-sm-6">
-                        <div class="product same-height">
-                            <div class="flip-container">
-                                <div class="flipper">
-                                    <div class="front">
-                                        <a href="detail.html">
-                                            <img src="img/product3.jpg" alt="" class="img-responsive">
-                                        </a>
-                                    </div>
-                                    <div class="back">
-                                        <a href="detail.html">
-                                            <img src="img/product3_2.jpg" alt="" class="img-responsive">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="detail.html" class="invisible">
-                                <img src="img/product3.jpg" alt="" class="img-responsive">
-                            </a>
-                            <div class="text">
-                                <h3>Fur coat</h3>
-                                <p class="price">$143</p>
-
-                            </div>
-                        </div>
-                        <!-- /.product -->
-                    </div>
-
-                </div>
-
-
-            </div>
-            <!-- /.col-md-9 -->
-
-            <div class="col-md-3">
-                <div class="box" id="order-summary">
-                    <div class="box-header">
-                        <h3>Order summary</h3>
-                    </div>
-                    <p class="text-muted">Shipping and additional costs are calculated based on the values you have entered.</p>
-
-                    <div class="table-responsive">
-                        <table class="table">
-                            <tbody>
-                                <tr>
-                                    <td>Order subtotal</td>
-                                    <th>$@Model.CartTotal</th>
-                                </tr>
-                                <tr>
-                                    <td>Shipping and handling</td>
-                                    <th>$0.00</th>
-                                </tr>
-                                <tr>
-                                    <td>Tax</td>
-                                    <th>$0.00</th>
-                                </tr>
-                                <tr class="total">
-                                    <td>Total</td>
-                                    <th>$@Model.CartTotal</th>
-                                </tr>
+                                }
                             </tbody>
+
                         </table>
+
+                    </div>
+                    <!-- /.table-responsive -->
+
+                    <div class="box-footer">
+                        <div class="pull-left">
+                            <a href="@Url.Action("Index","Store")" class="btn btn-default"><i class="fa fa-chevron-left"></i> Continue shopping</a>
+                        </div>
+                        <div class="pull-right">
+                            <!--  <button class="btn btn-default"><i class="fa fa-refresh"></i> Update basket</button>-->
+                            <a href="@Url.Action("AddressAndPayment","Checkout")" class="btn btn-primary">
+                                Proceed to checkout <i class="fa fa-chevron-right"></i>
+                            </a>
+                        </div>
                     </div>
 
-                </div>
+                </form>
 
             </div>
-            <!-- /.col-md-3 -->
+            <!-- /.box -->
+
+
+            <div class="row same-height-row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="box same-height">
+                        <h3>You may also like these products</h3>
+                    </div>
+                </div>
+                @foreach (var item in ViewBag.Products)
+                {
+                    count++;
+                    <div class="col-md-3 col-sm-6">
+                        <div class="product same-height">
+                            <div class="flip-container">
+                                <div class="flipper">
+                                    <div class="front">
+                                        <a href="@Url.Action("Details","Products", new {id = @item.ProductID })">
+                                            <img src="@item.Image" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="back">
+                                        <a href="@Url.Action("Details","Products", new {id = @item.ProductID })">
+                                            <img src="@item.Image" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="@Url.Action("Details","Products", new {id = @item.ProductID })" class="invisible">
+                                <img src="@item.Image" alt="" class="img-responsive">
+                            </a>
+                            <div class="text">
+                                <h3>@item.Title</h3>
+                                <p class="price">$@item.Price</p>
+                            </div>
+                        </div>
+                        <!-- /.product -->
+                    </div>
+                    if (count >= 3)
+                    {
+                        break;
+                    }
+                }
+
+
+            </div>
+
 
         </div>
-        <!-- /.container -->
+        <!-- /.col-md-9 -->
+
+        <div class="col-md-3">
+            <div class="box" id="order-summary">
+                <div class="box-header">
+                    <h3>Order summary</h3>
+                </div>
+                <p class="text-muted">Shipping and additional costs are calculated based on the values you have entered.</p>
+
+                <div class="table-responsive">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>Order subtotal</td>
+                                <th>$@Model.CartTotal</th>
+                            </tr>
+                            <tr>
+                                <td>Shipping and handling</td>
+                                <th>$0.00</th>
+                            </tr>
+                            <tr>
+                                <td>Tax</td>
+                                <th>$0.00</th>
+                            </tr>
+                            <tr class="total">
+                                <td>Total</td>
+                                <th>$@Model.CartTotal</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- /.col-md-3 -->
+
     </div>
+    <!-- /.container -->
+</div>
     <!-- /#content -->

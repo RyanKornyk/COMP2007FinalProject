@@ -17,12 +17,18 @@ namespace COMP2007FinalAssingment.Controllers
         {
             var cart = ShoppingCart.GetCart(this.HttpContext);
 
+
             // Set up our ViewModel
             var viewModel = new ShoppingCartViewModel
             {
+
                 CartItems = cart.GetCartItems(),
                 CartTotal = cart.GetTotal()
             };
+
+            ViewBag.Products = storeDB.Products.Where(p => p.Rating.Equals(5) || p.Rating.Equals(4));
+            int productCount = storeDB.Products.Where(p => p.Rating.Equals(5) || p.Rating.Equals(4)).Count();
+            Random rnd = new Random();
             // Return the view
             return View(viewModel);
         }
