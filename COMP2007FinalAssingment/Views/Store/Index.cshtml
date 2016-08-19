@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<COMP2007FinalAssingment.Models.Product>
 @{
     ViewBag.Title = "Store";
     string tempImg;
@@ -29,6 +29,11 @@
 
                 <div class="panel-body">
                     <ul class="nav nav-pills nav-stacked category-menu">
+                        <li>
+                            <a href="@Url.Action("index", new { filter = "" })">View All <span class="badge pull-right"></span></a>
+                            
+                        </li>
+                        <hr />
                         <li>
                             <a href="#">Brands <span class="badge pull-right"></span></a>
                             <ul>
@@ -82,11 +87,11 @@
                 <h1>Store</h1>
                 <p>In our store we offer wide selection of the best products we have found and carefully selected worldwide.</p>
             </div>
-            <!--
+            
             <div class="box info-bar">
                 <div class="row">
                     <div class="col-sm-12 col-md-4 products-showing">
-                        Showing <strong>12</strong> of <strong>25</strong> products
+                        Showing <strong>@ViewData["itemCount"]</strong> of <strong>@ViewData["itemCount"]</strong> products
                     </div>
 
                     <div class="col-sm-12 col-md-8  products-number-sort">
@@ -100,11 +105,9 @@
                                 <div class="col-md-6 col-sm-6">
                                     <div class="products-sort-by">
                                         <strong>Sort by</strong>
-                                        <select name="sort-by" class="form-control">
-                                            <option>Price</option>
-                                            <option>Name</option>
-                                            <option>Sales first</option>
-                                        </select>
+                                        @Html.ActionLink("Title", "Index", new { sortOrder = ViewBag.NameSortParm })
+                                        @Html.ActionLink("Price", "Index", new { sortOrder = ViewBag.PriceSortParm })
+
                                     </div>
                                 </div>
                             </form>
@@ -112,9 +115,9 @@
                     </div>
                 </div>
             </div>
-            -->
+            
             <div class="row products">
-                @foreach (var item in ViewBag.Products) {
+                @foreach (var item in Model) {
                     if(@item.Image == null)
                     {
                         tempImg = "../Assets/img/placeholder-450-600.jpg";
