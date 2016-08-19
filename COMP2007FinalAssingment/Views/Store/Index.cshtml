@@ -34,7 +34,7 @@
                             <ul>
                                 @foreach (var item in ViewBag.Brands) { 
                                 <li>
-                                    <a href="">@item.Title</a>
+                                    <a href="@Url.Action("index", new { filter = @item.Title })">@item.Title</a>
                                 </li>
                                 }
                                
@@ -46,7 +46,7 @@
                                 @foreach (var item in ViewBag.Goals)
                                 {
                                 <li>
-                                    <a href="#">@item.Title</a>
+                                    <a href="@Url.Action("index", new { filter = @item.Title })">@item.Title</a>
                                 </li>
                                 }
                             </ul>
@@ -56,7 +56,7 @@
                             <ul>
                                 @foreach(var item in ViewBag.Ingredients) { 
                                 <li>
-                                    <a href="#">@item.Title</a>
+                                    <a href="@Url.Action("index", new { filter = @item.Title })">@item.Title</a>
                                 </li>
                                 }
                             </ul>

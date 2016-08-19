@@ -12,9 +12,20 @@ namespace COMP2007FinalAssingment.Controllers
         private AtlasStoreContext db = new AtlasStoreContext();
 
         // GET: Store
-        public ActionResult Index()
+        public ActionResult Index(string filter = "")
         {
-            ViewBag.Products = db.Products;
+            if (!String.IsNullOrEmpty(filter))
+            {
+                ViewBag.Products = db.Products.Where(s => s.Brand.Title.Contains(filter)
+                                       || s.Ingredient.Title.Contains(filter)
+                                       || s.Goal.Title.Contains(filter)
+                                       || s.Title.Contains(filter));
+            }
+            else
+            {
+                ViewBag.Products = db.Products;
+            }
+           
             ViewBag.Brands = db.Brands;
             ViewBag.Goals = db.Goals;
             ViewBag.Ingredients = db.Ingredients;
