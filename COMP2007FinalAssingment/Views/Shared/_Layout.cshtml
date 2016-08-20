@@ -19,10 +19,25 @@
     <div id="top">
         <div class="container">
             <div class="col-md-6 offer" data-animate="fadeInDown">
-                <a href="#" class="btn btn-success btn-sm" data-animate-hover="shake">Offer of the day</a>  <a href="#">Get flat 35% off on orders over $50!</a>
+                
+                <ul class="menu">
+<li><a href="#" class="btn btn-success btn-sm" data-animate-hover="shake">Full Crud</a></li>
+                    <li>
+                        @Html.ActionLink("Products", "Index", "Products")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Brands", "Index", "Brands")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Goals", "Index", "Goals")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Ingredients", "Index", "Ingredients")
+                    </li>
+                </ul>
             </div>
             <div class="col-md-6" data-animate="fadeInDown">
-               
+                
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
@@ -61,71 +76,18 @@
             <div class="navbar-collapse collapse" id="navigation">
 
                 <ul class="nav navbar-nav navbar-left">
-                    <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Index" ? "active" : "")">
+                    <li class="">
                         @Html.ActionLink("Home", "Index", "Home")
                     </li>
-                    <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "About" ? "active" : "")">
+                    <li class="">
                        @Html.ActionLink("About", "About", "Home")
                     </li>
-                    <li class="dropdown yamm-fw">
-                        <a href="@Url.Action("Index","Store")" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Store <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <div class="yamm-content">
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <h5>Main Store</h5>
-                                            <ul>
-                                                <li>
-                                                    @Html.ActionLink("Main Store", "Index", "Store")
-                                                </li>
-                                            </ul>
-                                            <h5>Products</h5>
-                                            <ul>
-                                                <li>
-                                                    @Html.ActionLink("Products", "Index", "Products")
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <h5>Brands</h5>
-                                            <ul>
-                                                <li>
-                                                    @Html.ActionLink("Brands", "Index", "Brands")
-                                                </li>
-                                         
-                                            </ul>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <h5>Goals</h5>
-                                            <ul>
-                                                <li>
-                                                    @Html.ActionLink("Goals", "Index", "Goals")
-                                                </li>
-
-                                            </ul>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <h5>Ingredients</h5>
-                                            <ul>
-                                                <li>
-                                                    @Html.ActionLink("Ingredients", "Index", "Ingredients")
-                                                </li>
-
-                                            </ul>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /.yamm-content -->
-                            </li>
-                        </ul>
+                    <li class="">
+                        @Html.ActionLink("Store", "Index", "Store")
                     </li>
-                    
-                    
                    
                   
-                    <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Contact" ? "active" : "")">
+                    <li class="">
                         @Html.ActionLink("Contact", "Contact", "Home")
                     </li>
                 </ul>
