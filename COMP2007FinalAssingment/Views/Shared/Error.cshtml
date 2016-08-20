@@ -3,7 +3,35 @@
 @{
     ViewBag.Title = "Error";
 }
+<div id="content">
+    <div class="container">
 
-<h1 class="text-danger">Error.</h1>
-<h2 class="text-danger">An error occurred while processing your request.</h2>
+        <div class="col-md-12">
+
+            <div class="row" id="error-page">
+                <div class="col-sm-6 col-sm-offset-3">
+                    <div class="box">
+
+                        <p class="text-center">
+                            <img class="error-logo" src="~/Assets/img/logo.png" alt="Atlas Supplements">
+                        </p>
+
+                        <h3>Uh oh - the page you are looking for doesn't exist!</h3>
+                        <h4 class="text-muted">Error 404 - Page not found</h4>
+
+                        <p class="text-center">To continue please use the <strong>Menu</strong> above.</p>
+
+                        <p class="buttons">
+                            <a href="@Url.Action("index","Home")" class="btn btn-primary"><i class="fa fa-home"></i> Go to Homepage</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- /.col-md-9 -->
+    </div>
+    <!-- /.container -->
+</div>
 
